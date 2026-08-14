@@ -1,5 +1,7 @@
-:root{
+:root {
     --sombra-texto: text-shadow: 0 3px 5px rgba(0, 0, 0, 0.35);
+    --cor-fundo-primaria: background-color: #FFFFFF;
+    --cor-fundo-secundaria: background-color: #F7F7F7;
 }
 
 * {
@@ -10,36 +12,36 @@
 }
 
 body {
-    background-color: #F8FAFC;
+    background-color: var(--cor-fundo-primaria);
 }
 
 header {
-    width: 100vw;
+    width: 100%;
     height: 5rem;
-    background-color: #FFFFFF;
+    background-color: var(--cor-fundo-primaria);
     display: flex;
     align-items: center;
     justify-content: flex-end;
     padding: 0rem 2.5rem 0rem 2.5rem;
     box-shadow: rgba(100, 100, 111, 0.2) 0rem 0.4rem 1.8rem 0rem;
-}
 
-nav ul {
-    display: flex;
+    nav ul {
+        display: flex;
 
-    li {
-        font-size: 1rem;
-        margin-left: 2rem;
-        list-style-type: none;
-        font-weight: 500;
-        color: #555555;
-        cursor: pointer;
+        li {
+            font-size: 1rem;
+            margin-left: 1.4rem;
+            list-style-type: none;
+            font-weight: 400;
+            color: #333333;
+            cursor: pointer;
+        }
     }
 }
 
 .hero {
     position: relative;
-    width: 100vw;
+    width: 100%;
     height: 40rem;
     background-image: url("../img/hero-800.jpg");
     background-size: cover;
@@ -51,20 +53,20 @@ nav ul {
     flex-direction: column;
     gap: 1rem;
 
-    h1, p, button{
+    h1, p, button {
         position: relative;
     }
 
-    h1{
+    h1 {
         font-size: 3rem;
         max-width: 60rem;
         font-weight: 800;
         text-align: center;
         text-shadow: var(--sombra-texto);
-        
+
     }
 
-    p{
+    p {
         font-size: 1.2rem;
         max-width: 45rem;
         text-align: center;
@@ -78,4 +80,34 @@ nav ul {
     background: rgba(0, 0, 0, 0.5);
     width: 100%;
     height: 100%;
+}
+
+.diferencias {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 4rem;
+    width: 100%;
+    height: 20rem;
+    background-color: var(--cor-fundo-secundaria);
+
+    .card-diferenciais {
+        text-align: center;
+        max-width: 18rem;
+
+        p {
+            color: #333333;
+            font-weight: 300;
+        }
+
+        img, h2, p {
+            padding-bottom: 0.4rem;
+        }
+
+        h2 {
+            font-weight: 400;
+            font-size: 1.2rem;
+        }
+    }
 }
