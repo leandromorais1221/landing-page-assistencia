@@ -1,7 +1,7 @@
 :root {
     --sombra-texto: text-shadow: 0 3px 5px rgba(0, 0, 0, 0.35);
     --cor-fundo-primaria: background-color: #FFFFFF;
-    --cor-fundo-secundaria: background-color: #F7F7F7;
+    --cor-fundo-secundaria: background-color: #F3F4F6;
 }
 
 * {
@@ -17,7 +17,7 @@ body {
 
 header {
     width: 100%;
-    height: 5rem;
+    height: 4rem;
     background-color: var(--cor-fundo-primaria);
     display: flex;
     align-items: center;
@@ -108,6 +108,57 @@ header {
         h2 {
             font-weight: 400;
             font-size: 1.2rem;
+        }
+    }
+}
+
+.nossos-servicos {
+    max-width: 70%;
+    margin: 0 auto;
+    height: 85rem;
+    text-align: center;
+
+    h2{
+        font-weight: 300;
+        font-size: 2rem;
+        margin: 4rem 0rem 4rem 0rem;
+    }
+
+    .card-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2.4rem;
+        flex-wrap: wrap;
+
+        .card{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 20rem;
+            height: 18rem;
+            background-color: white;
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+            border-radius: 0.4rem;
+            transition: transform 0.5s ease;
+
+            img{
+                width: 180px;
+                height: auto
+            }
+
+            p{
+                margin-top: 1rem;
+                font-weight: 300;
+                text-shadow: var(--sombra-texto);
+            }
+        };
+
+        .card:hover{
+            transform: translateY(-10px);
+            
+
         }
     }
 }
